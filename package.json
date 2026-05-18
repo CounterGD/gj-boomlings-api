@@ -1,33 +1,25 @@
 {
   "name": "gj-boomlings-api",
-  "version": "2.0.2",
-  "description": "A light-weight Geometry Dash API wrapper",
-  "main": "index.js",
-  "scripts": {
-    "test": "node .",
-    "start": "node ."
-  },
-  "author": "shikoshib",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shikoshib/gj-boomlings-api.git"
-  },
-  "bugs": {
-    "url": "https://github.com/shikoshib/gj-boomlings-api/issues"
-  },
-  "homepage": "https://github.com/shikoshib/gj-boomlings-api/wiki",
-  "keywords": [
-    "geometrydash",
-    "gd",
-    "gj",
-    "boomlings",
-    "api",
-    "gaming",
-    "robtop",
-    "geometry dash"
+  "version": "2.0.0",
+  "description": "A re-imagined, high-performance, dependency-free Geometry Dash 2.2 API wrapper.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md"
   ],
-  "dependencies": {
-    "node-fetch": "^2.7.0"
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["geometry-dash", "gd", "boomlings", "api", "wrapper", "2.2", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   }
 }

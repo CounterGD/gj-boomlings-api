@@ -1,47 +1,19 @@
-**⚠ WARNING**: I quit Geometry Dash due to a loss of interest towards it. Consequently, it also includes `gj-boomlings-api`. This package will no longer be maintained. If you wish to continue maintaining it, feel free to fork this repository and work on your own copy.
+# gj-boomlings-api
 
-<div align="center">
-  <h1>gj-boomlings-api</h1>
-  A light-weight Geometry Dash API wrapper<br><br><a href="https://github.com/shikoshib/gj-boomlings-api/wiki"><b>Documentation</b></a><br><br>
-  <a href="https://www.npmjs.com/package/gj-boomlings-api"><img src="https://img.shields.io/npm/v/gj-boomlings-api.svg?maxAge=3600" alt="npm version" /></a>
-  <a href="https://www.npmjs.com/package/gj-boomlings-api"><img src="https://img.shields.io/npm/dt/gj-boomlings-api" /></a>
-  <a href="https://snyk.io/test/github/shikoshib/gj-boomlings-api"><img src="https://snyk.io/test/github/shikoshib/gj-boomlings-api/badge.svg" alt="Known Vulnerabilities" /></a>
-</div>
+A re-imagined, high-performance, dependency-free Geometry Dash 2.2 API wrapper for Node.js and TypeScript.
 
-# About
-**gj-boomlings-api** is a light-weight Node.js module that allows you to easily interact with Geometry Dash API.
-# Installation
-## Node.js
-```
-npm i gj-boomlings-api
-yarn add gj-boomlings-api
-```
-# Examples
-## Download a level
-```js
-const gd = require("gj-boomlings-api");
-gd.dlLevel("95540029").then(console.log);
-```
-## View a profile
-```js
-const gd = require("gj-boomlings-api");
-gd.getProfile("shikoshib").then(console.log);
-```
-## Get gauntlets
-```js
-const gd = require("gj-boomlings-api");
-gd.getGauntlets().then(console.log);
-```
-## Post a message on a profile
-```js
-const gd = require("gj-boomlings-api");
-gd.uploadAccountPost("I love gj-boomlings-api!", "shikoshib", "your password here");
-```
-## Send a message
-```js
-// This code sends a message from shikoshib to Mipper6
-const gd = require("gj-boomlings-api");
-gd.uploadMessage("Mipper6", "message subject", "message content", "shikoshib", "your password here");
-```
-# License
-[ISC](https://github.com/shikoshib/gj-boomlings-api/blob/main/LICENSE)
+## Installation
+
+\`\`\`bash
+npm install gj-boomlings-api
+\`\`\`
+
+## Quick Start
+
+\`\`\`javascript
+import { GeometryDashClient } from "gj-boomlings-api";
+
+const gd = new GeometryDashClient();
+const level = await gd.downloadLevel(105657410);
+console.log(level.name);
+\`\`\`
